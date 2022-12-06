@@ -3,6 +3,17 @@ from tkinter import ttk #combobox
 import requests #to use apis
 
 
+def data_get():
+    city = city_name.get()
+    data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=20a01944eda34a13f4a4dcecfff77197").json()
+
+    w1.config(text=data["weather"][0]["main"])
+    wd1.config(text=data["weather"][0]["description"])
+    temp1.config(text=str(int(data["main"]["temp"]-273)))
+    p1.config(text=data["main"]["pressure"])
+
+
+
 win = Tk()
 win.title("Weather")
 win.config(bg="blue")
@@ -43,7 +54,7 @@ p1 = Label(win,text="",font=("Time New Roman",20))
 p1.place(x=250, y=490,height=50,width=210) 
 
 
-done_button = Button(win,text="DONE",font=("Time New Roman",30,"bold"))
+done_button = Button(win,text="DONE",font=("Time New Roman",30,"bold"),command=data_get)
 done_button.place(x=150,y=210,height=50,width=200)
 
 win.mainloop()
