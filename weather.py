@@ -30,4 +30,16 @@ wd.place(x=25, y=350,height=50,width=210)
 wd1 = Label(win,text="",font=("Time New Roman",20))
 wd1.place(x=250, y=350,height=50,width=210) 
 
+
+temp = Label(win,text="Temperature",font=("Time New Roman",20))
+temp.place(x=25, y=420,height=50,width=210)
+temp1 = Label(win,text="",font=("Time New Roman",20))
+temp1.place(x=250, y=420,height=50,width=210) 
+
+
+p = Label(win,text="Pressure",font=("Time New Roman",20))
+p.place(x=25, y=490,height=50,width=210)
+p1 = Label(win,text="",font=("Time New Roman",20))
+p1.place(x=250, y=490,height=50,width=210) 
+
 win.mainloop()
