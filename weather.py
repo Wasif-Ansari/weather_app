@@ -42,4 +42,8 @@ p.place(x=25, y=490,height=50,width=210)
 p1 = Label(win,text="",font=("Time New Roman",20))
 p1.place(x=250, y=490,height=50,width=210) 
 
+
+done_button = Button(win,text="DONE",font=("Time New Roman",30,"bold"))
+done_button.place(x=150,y=210,height=50,width=200)
+
 win.mainloop()
