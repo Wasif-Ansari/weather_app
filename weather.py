@@ -19,5 +19,15 @@ list_name.sort()
 com = ttk.Combobox(win,text="MY WEATHER APP",values=list_name,font=("Time New Roman",25,"bold"),textvariable=city_name)
 com.place(x=25,y=140,height=40,width=450)
 
+w = Label(win,text="Weather Climate",font=("Time New Roman",20))
+w.place(x=25, y=280,height=50,width=210)
+w1 = Label(win,text="",font=("Time New Roman",20))
+w1.place(x=250, y=280,height=50,width=210)
+
+
+wd = Label(win,text="Weather Descrpn.",font=("Time New Roman",18))
+wd.place(x=25, y=350,height=50,width=210)
+wd1 = Label(win,text="",font=("Time New Roman",20))
+wd1.place(x=250, y=350,height=50,width=210) 
 
 win.mainloop()
